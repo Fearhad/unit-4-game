@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Star Wars RPG</title>
+    <link href="https://fonts.googleapis.com/css?family=Poller+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo|IBM+Plex+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="logo">
+            <img src="assets/images/starwars.svg" alt="">
+            <p>ROLE PLAYING GAME</p>
+        </div>
+        <div id="characterBox">
+            <div class="charCard" id="lukeCard">
+                <h6 class="cardTitle">Luke Skywalker</h6>
+                <img class="glowing-border" id="luke" src="assets/images/luke.jpg" alt="">
+                <h6 class="cardHP">120</h6>
+            </div>
+            <div class="charCard" id="obiwanCard">
+                <h6 class="cardTitle">Obi-Wan Kenobi</h6>
+                <img class="glowing-border" id="obiwan" src="assets/images/Obiwan.jpg" alt="">
+                <h6 class="cardHP">140</h6>
+            </div>
+            <div class="charCard" id="yodaCard">
+                <h6 class="cardTitle">Yoda</h6>
+                <img class="glowing-border" id="yoda" src="assets/images/yoda.jpg" alt="">
+                <h6 class="cardHP">160</h6>
+            </div>
+            <div class="charCard" id="vaderCard">
+                <h6 class="cardTitle">Darth Vader</h6>
+                <img class="glowing-border" id="vader" src="assets/images/vader.jpg" alt="">
+                <h6 class="cardHP">180</h6>
+            </div>
+            <h2 id="choose">CHOOSE YOUR CHARACTER</h2>
+            <h2 id="chooseEnemy">CHOOSE YOUR ENEMY</h2>
+        </div>
+        <div id="battle">
+            <h2 id="chosen">YOUR CHARACTER</h2>
+            <h2 id="chosenEnemy">YOUR ENEMY</h2>
+        </div>
+        <div id="outputUI">
+            <div id="outputWindow">
+                <img id="uiImage" src="assets/images/futureUI.svg" alt="">
+                <p id="yourOutput">You attack Enemy and hit for 20!</p>
+                <p id="enemyOutput">The Enemy counterattacks and hits you for 20!</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

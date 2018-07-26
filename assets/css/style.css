@@ -1,0 +1,144 @@
+html {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Poller One', cursive;
+    overflow: hidden;
+}
+
+.container {}
+
+#logo {
+    color: #FFE81F;
+    font-size: 1.5;
+    text-align: center;
+    float: right;
+}
+
+.glowing-border {
+    border: 5px solid #dadada;
+    border-radius: 15px;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.cardTitle {
+    font-family: 'Exo', sans-serif;
+    background-color: #9ecaed;
+    color: black;
+    width: 161px;
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    text-align: center;
+    padding-bottom: 2px;
+}
+
+.cardHP {
+    font-family: 'Exo', sans-serif;
+    background-color: #AFD086;
+    color: black;
+    width: 161px;
+    position: absolute;
+    top: 113px;
+    left: 9px;
+    text-align: center;
+    padding-top: 2px;
+}
+
+#lukeCard,
+#obiwanCard,
+#vaderCard,
+#yodaCard {
+    position: relative;
+    float: left;
+}
+
+#choose {
+    display: block;
+    font-family: 'Poller One', cursive;
+    color: #FFE81F;
+    font-size: 1.5;
+    text-align: center;
+}
+
+#chooseEnemy {
+    display: block;
+    font-family: 'Poller One', cursive;
+    color: #FFE81F;
+    font-size: 1.5;
+    text-align: center;
+}
+
+#chosen {
+    display: block;
+    font-family: 'Poller One', cursive;
+    color: #FFE81F;
+    font-size: 1.5;
+    text-align: center;
+    float: left;
+    padding: 20px;
+}
+
+#chosenEnemy {
+    display: block;
+    font-family: 'Poller One', cursive;
+    color: #FFE81F;
+    font-size: 1.5;
+    text-align: center;
+    float: left;
+    padding: 20px;
+}
+
+#battle {
+    clear:both;
+}
+
+#characterBox {
+    float: left;
+}
+
+.charCard {
+    padding: 5px;
+}
+
+#outputWindow {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 500px;
+}
+
+#uiImage {
+    position: absolute;
+    bottom: -260px;
+    left: -85px;
+}
+
+#outputUI {
+    position:fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#yourOutput {
+position: absolute;
+bottom: 100px;
+left: 35px;
+color: #9ecaed;
+font-family: 'IBM Plex Mono', monospace;
+font-size: 14px;
+}
+
+#enemyOutput {
+    position: absolute;
+    bottom: 70px;
+    left: 35px;
+    color: red;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    }
