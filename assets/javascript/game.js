@@ -1,3 +1,5 @@
+//Array of Character objects in the game
+
 var gameChars = [
 
     luke = {
@@ -8,8 +10,6 @@ var gameChars = [
         counterAttack: 16,
         health: 120,
         localDiv: "#lukeCard",
-        isYourCharacter: false,
-        isDefender: false,
         isDefeated: false
     },
     obiwan = {
@@ -19,8 +19,6 @@ var gameChars = [
         counterAttack: 7,
         health: 175,
         localDiv: "#obiwanCard",
-        isYourCharacter: false,
-        isDefender: false,
         isDefeated: false
     },
 
@@ -31,8 +29,6 @@ var gameChars = [
         counterAttack: 21,
         health: 180,
         localDiv: "#yodaCard",
-        isYourCharacter: false,
-        isDefender: false,
         isDefeated: false
     },
 
@@ -43,27 +39,28 @@ var gameChars = [
         counterAttack: 16,
         health: 200,
         localDiv: "#vaderCard",
-        isYourCharacter: false,
-        isDefender: false,
         isDefeated: false
     }
 ]
-var charIndex;
-var enemiesDefeated = 0;
-var chosenChar = null;
-var chosenEnemyChar = null;
-var gameState = "chooseChar";
+var enemiesDefeated = 0;    //Used for win condition
+var chosenChar = null;      //Your character
+var chosenEnemyChar = null; //Your current opponent
+var gameState = "chooseChar"; 
 var attackSnd = document.getElementById("attackSnd");
 var gameMusic = document.getElementById("gameMusic");
 
+
+//Used to turn on certain elements during the game
 function turnOn(el) {
     $(el).css("display", "block")
 };
 
+//used to turn off certain elements during the game
 function turnOff(el) {
     $(el).css("display", "none")
 };
 
+//handles the attack outcome and outputs results to console
 function playerAttack() {
     gameChars[chosenEnemyChar].health = gameChars[chosenEnemyChar].health - gameChars[chosenChar].attack;
     $("#yourOutput").text("You hit " + gameChars[chosenEnemyChar].name + " for " + gameChars[chosenChar].attack + " points of damage!");
@@ -73,6 +70,7 @@ function playerAttack() {
     $("#you .cardHP").text(gameChars[chosenChar].health);
 };
 
+//Let's you know you won
 function youWin() {
     turnOn("#restartDiv");
     turnOff("#enemy");
@@ -80,6 +78,8 @@ function youWin() {
     $("#enemyOutput").text("Your enemies cower before you!");
     alert("You won the game! Press restart to play again!")
 };
+
+//checks to see if you lost or if an opponent has been defeated
 
 function defeatedTest() {
     if (gameChars[chosenChar].health <= 0) {
@@ -109,7 +109,7 @@ function defeatedTest() {
 };
 
 
-
+//click handler for clicking a character
 $(document).ready(function () {    
     $(document).on("click", ".charBox", function () {
         gameMusic.play();
@@ -138,6 +138,7 @@ $(document).ready(function () {
         }
     });
 });
+//click handler for clicking the attack button
 $(document).on("click", ".attack", function () {
     if (gameChars[chosenEnemyChar].isDefeated == false) {
         attackSnd.currentTime = 0;
@@ -147,6 +148,7 @@ $(document).on("click", ".attack", function () {
     }
 });
 
+//click handler for clicking the restart button
 $(document).on("click", ".restart", function () {
     location.reload();
 });
