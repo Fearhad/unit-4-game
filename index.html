@@ -13,31 +13,41 @@
 </head>
 
 <body>
+    <audio id="attackSnd" src="assets/sound/clash.mp3"></audio>
+    <audio id="gameMusic" loop src="assets/sound/Automation.mp3"></audio>
     <div class="container">
         <div id="logo">
             <img src="assets/images/Starwars.svg" alt="">
             <p>ROLE PLAYING GAME</p>
         </div>
         <div id="characterBox">
-            <div class="charCard" id="lukeCard">
-                <h6 class="cardTitle">Luke Skywalker</h6>
-                <img class="glowing-border" id="luke" src="assets/images/luke.jpg" alt="">
-                <h6 class="cardHP">120</h6>
+            <div id="luke" data-character="0" class="charBox">
+                <div class="charCard" id="lukeCard">
+                    <h6 class="cardTitle">Luke Skywalker</h6>
+                    <img class="glowing-border" id="lukeImage" src="assets/images/luke.jpg" alt="">
+                    <h6 class="cardHP">120</h6>
+                </div>
             </div>
+            <div id="obiwan" data-character="1" class="charBox">
             <div class="charCard" id="obiwanCard">
                 <h6 class="cardTitle">Obi-Wan Kenobi</h6>
-                <img class="glowing-border" id="obiwan" src="assets/images/Obiwan.jpg" alt="">
-                <h6 class="cardHP">140</h6>
+                <img class="glowing-border" id="obiwanImage" src="assets/images/Obiwan.jpg" alt="">
+                <h6 class="cardHP">175</h6>
             </div>
+            </div>
+            <div id="yoda" data-character="2" class="charBox">
             <div class="charCard" id="yodaCard">
                 <h6 class="cardTitle">Yoda</h6>
-                <img class="glowing-border" id="yoda" src="assets/images/yoda.jpg" alt="">
-                <h6 class="cardHP">160</h6>
+                <img class="glowing-border" id="yodaImage" src="assets/images/yoda.jpg" alt="">
+                <h6 class="cardHP">180</h6>
+                </div>
             </div>
+            <div id="vader" data-character="3" class="charBox">
             <div class="charCard" id="vaderCard">
                 <h6 class="cardTitle">Darth Vader</h6>
-                <img class="glowing-border" id="vader" src="assets/images/vader.jpg" alt="">
-                <h6 class="cardHP">180</h6>
+                <img class="glowing-border" id="vaderImage" src="assets/images/vader.jpg" alt="">
+                <h6 class="cardHP">200</h6>
+                </div>
             </div>
             <h2 id="choose">CHOOSE YOUR CHARACTER</h2>
             <h2 id="chooseEnemy">CHOOSE YOUR ENEMY</h2>
@@ -50,15 +60,24 @@
             <div id="enemy">
                 <h2 id="chosenEnemy">YOUR ENEMY</h2>
             </div>
+            <div id="attackDiv">
+                <a href="#" class="btn double attack">ATTACK</a>
+            </div>
+            <div id="restartDiv">
+                    <a href="#" class="btn double restart">RESTART</a>
+                </div>
         </div>
         <div id="outputUI">
             <div id="outputWindow">
                 <img id="uiImage" src="assets/images/futureUI.svg" alt="">
-                <p id="yourOutput">You attack Enemy and hit for 20!</p>
-                <p id="enemyOutput">The Enemy counterattacks and hits you for 20!</p>
+                <p id="yourOutput"></p>
+                <p id="enemyOutput"></p>
             </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js" type="text/javascript"></script>
 </body>
 
 </html>
