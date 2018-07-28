@@ -76,8 +76,7 @@ function youWin() {
     turnOff("#enemy");
     $("#yourOutput").text("You have won the game!");
     $("#enemyOutput").text("Your enemies cower before you!");
-    alert("You won the game! Press restart to play again!")
-};
+    };
 
 //checks to see if you lost or if an opponent has been defeated
 
@@ -85,7 +84,6 @@ function defeatedTest() {
     if (gameChars[chosenChar].health <= 0) {
         $("#enemyOutput").text("You have been defeated by " + gameChars[chosenEnemyChar].name);
         gameState = "GameOver";
-        alert("You have been defeated! Press restart to try again!")
         turnOff("#attackDiv");
         turnOn("#restartDiv");
     } else {
