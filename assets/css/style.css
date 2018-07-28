@@ -212,6 +212,11 @@ html {
     margin-left: 30px;
 }
 
+#restartDiv {
+    position: absolute;
+    top: 200px;
+}
+
 #you {
     display: none;
     float: left;
