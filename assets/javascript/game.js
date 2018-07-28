@@ -86,6 +86,7 @@ function defeatedTest() {
         gameState = "GameOver";
         turnOff("#attackDiv");
         turnOn("#restartDiv");
+        alert("You have been defeated! Press restart to try again!")
     } else {
         if (gameChars[chosenEnemyChar].health <= 0) {
             $("#yourOutput").text("You have defeated " + gameChars[chosenEnemyChar].name);
